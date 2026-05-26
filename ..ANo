@@ -1,0 +1,25 @@
+/*Num contexto de otimização de desempenho, por que é vantajoso usar 
+'appendChild' ou 'append' em vez de 'innerHTML' em listas grandes?
+
+R:
+Porque eles não removem o conteúdo existente da memória 
+ao adicionar novos elementos.
+
+P:
+Em qual situação o uso de 'appendChild' é mais eficaz do que 
+'innerHTML'?
+
+R:Quando se trabalha com uma grande quantidade de elementos e deseja-se adicionar 
+apenas um novo elemento 
+mantendo os outros intactos.
+
+P:Qual é a diferença fundamental entre usar 'innerHTML' e 'appendChild' ao adicionar 
+um novo elemento a uma lista no DOM?
+
+R:'innerHTML' modifica todo o conteúdo do elemento, enquanto 'appendChild' apenas adiciona o novo elemento sem
+ modificar o conteúdo existente.
+
+ CODIGO: let newLi = document.createElement("li")
+    newLi.innerText = "item adicionado"
+
+    ul.appendChild(newLi)*/
