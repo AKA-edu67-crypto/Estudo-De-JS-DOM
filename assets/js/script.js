@@ -10,9 +10,19 @@ botao.addEventListener("click", () => {
     let novoItem = document.createElement("li")
     novoItem.innerHTML = "Novo Item Adicionado!"
     lista.append(novoItem)
+    
     titulo.style.color = "blue"
     lista.style.backgroundColor = "gold"
+
+    //Novas linhas Do Exercicio Seguinte(BOTAO DELETAR)
+    let TodososItens = lista.children
+    if (TodososItens.length > 5) {
+        lista.lastElementChild.remove()
+    }
 })
+
+
+
 
 
 /* Capturou os elementos com o querySelector.
