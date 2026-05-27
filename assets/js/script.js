@@ -1,36 +1,26 @@
-let botao = document.querySelector("#meuBotao")
-let titulo = document.querySelector("#titulo")
-let lista = document.querySelector("ul")
+function clicou() {
+    const input = document.querySelector("input")
+    const botao = document.querySelector(".botao")
 
-
-botao.addEventListener("click", () => {
-    titulo.innerHTML = "O DOM È SENSACIONAL!"
-
-
-    let novoItem = document.createElement("li")
-    novoItem.innerHTML = "Novo Item Adicionado!"
-    lista.append(novoItem)
     
-    titulo.style.color = "blue"
-    lista.style.backgroundColor = "gold"
-
-    //Novas linhas Do Exercicio Seguinte(BOTAO DELETAR)
-    let TodososItens = lista.children
-    if (TodososItens.length > 5) {
-        lista.lastElementChild.remove()
+    if (input.getAttribute("type") === "text") {
+        input.setAttribute("type", "password")
+        botao.innerText = "Mostra senha"
+    } else {
+        input.setAttribute("type", "text")
+        botao.innerText = "Ocultar senha"
     }
-})
+}
 
+/*const input = document.querySelector("input")
 
+    console.log( input.getAttribute("placeholder"))
 
+    if (input.hasAttribute("placeholder")) {
+        console.log("tem place sim!")
+    } else {
+        console.log ("tem place nao!")
+    }*/
 
-
-/* Capturou os elementos com o querySelector.
-
-Criou um sensor de clique com o addEventListener.
-
-Alterou textos dinamicamente com o innerHTML.
-
-Criou elementos HTML do zero com o createElement e injetou na tela com o append.
-
-Controlou o CSS da página diretamente pelo JavaScript com o .style*/
+//input.setAttribute("placeholder", "placeholder alterado")
+//alterar atributo (ex: placeholder)
