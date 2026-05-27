@@ -1,26 +1,23 @@
 function clicou() {
-    const input = document.querySelector("input")
-    const botao = document.querySelector(".botao")
+    const button = document.querySelector("button")
 
-    
-    if (input.getAttribute("type") === "text") {
-        input.setAttribute("type", "password")
-        botao.innerText = "Mostra senha"
+    //remove e add = remove e adiciona
+    if (button.classList.contains("azul")) {
+        button.classList.remove("azul")
+        button.classList.add("verde")
     } else {
-        input.setAttribute("type", "text")
-        botao.innerText = "Ocultar senha"
+        button.classList.remove("verde")
+        button.classList.add("azul")
     }
 }
 
-/*const input = document.querySelector("input")
+//replace = substitui
+//toggle = apenas tira e adiciona tal elemento (tipo azul)
+//se tiver, ele remove. se nao tiver, ele coloca
 
-    console.log( input.getAttribute("placeholder"))
-
-    if (input.hasAttribute("placeholder")) {
-        console.log("tem place sim!")
-    } else {
-        console.log ("tem place nao!")
-    }*/
-
-//input.setAttribute("placeholder", "placeholder alterado")
-//alterar atributo (ex: placeholder)
+/* subtitui e coloca.
+if (button.classList.contains("azul")) {
+   button.classList.replace("azul", "verde")
+} else {
+    utton.classList.replace("verde", "azul")
+} */
