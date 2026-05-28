@@ -1,25 +1,18 @@
-
-function soltou (e) {
-    console.log("tecla apertada " + e.code);
-    console.log("SHIFT? " + e.shiftKey);
-    console.log("CTRL? " + e.ctrlKey);
-    console.log("ALT? " + e.altKey);
-    console.log("--");
-}
-
 const input = document.querySelector("input")
-input.addEventListener("keyup", soltou)
+const lista = document.querySelector("ul")
 
 
-//adiciona evento á tela (isso usando document)
-//document.addEventListener("keyup", soltou) 
+//funções
+function soltou(e) {
+    if (e.key === "Enter") {
+        const newLi = document.createElement('li');
 
+        newLi.innerHTML = input.value
 
-//Evento de teclado
-/*function apertou () {
-    console.log("APERTOU")
+        lista.appendChild(newLi)
+        input.value = ""
+    }
 }
 
-function segurou () {
-    console.log("SEGUROU")
-}*/
+//eventos
+input.addEventListener("keyup", soltou)
