@@ -1,23 +1,25 @@
-function clicou() {
-    const button = document.querySelector("button")
 
-    //remove e add = remove e adiciona
-    if (button.classList.contains("azul")) {
-        button.classList.remove("azul")
-        button.classList.add("verde")
-    } else {
-        button.classList.remove("verde")
-        button.classList.add("azul")
-    }
+function soltou (e) {
+    console.log("tecla apertada " + e.code);
+    console.log("SHIFT? " + e.shiftKey);
+    console.log("CTRL? " + e.ctrlKey);
+    console.log("ALT? " + e.altKey);
+    console.log("--");
 }
 
-//replace = substitui
-//toggle = apenas tira e adiciona tal elemento (tipo azul)
-//se tiver, ele remove. se nao tiver, ele coloca
+const input = document.querySelector("input")
+input.addEventListener("keyup", soltou)
 
-/* subtitui e coloca.
-if (button.classList.contains("azul")) {
-   button.classList.replace("azul", "verde")
-} else {
-    utton.classList.replace("verde", "azul")
-} */
+
+//adiciona evento á tela (isso usando document)
+//document.addEventListener("keyup", soltou) 
+
+
+//Evento de teclado
+/*function apertou () {
+    console.log("APERTOU")
+}
+
+function segurou () {
+    console.log("SEGUROU")
+}*/
